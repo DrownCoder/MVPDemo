@@ -6,7 +6,7 @@ import com.example.xuan.mvpdemo.bean.WeatherInfo;
 /**
  * Author : xuan.
  * Data : 2017/7/20.
- * Description :input the description of this file.
+ * Description :the view's operation
  */
 
 public interface IWeatherView {

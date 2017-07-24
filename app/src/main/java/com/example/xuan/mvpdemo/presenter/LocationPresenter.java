@@ -9,7 +9,7 @@ import com.example.xuan.mvpdemo.view.IWeatherView;
 /**
  * Author : xuan.
  * Data : 2017/7/21.
- * Description :get the location info from baidu sdk by gps
+ * Description :get the location info from baidu sdk by ip
  */
 
 public class LocationPresenter {

@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         />
     <LinearLayout
+        android:id="@+id/ll_weather_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -42,4 +43,16 @@
             />
     </LinearLayout>
 
+    <com.example.xuan.mvpdemo.widget.CircleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        app:circleRadius="70dp"
+        app:circleBac="@color/white"
+        app:indexRadius="5dp"
+        app:indexBac="@color/black"
+        android:layout_marginBottom="50dp"
+        />
 </RelativeLayout>

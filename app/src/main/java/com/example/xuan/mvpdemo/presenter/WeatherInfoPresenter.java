@@ -1,8 +1,5 @@
 package com.example.xuan.mvpdemo.presenter;
 
-import android.os.Handler;
-
-import com.example.xuan.mvpdemo.bean.City;
 import com.example.xuan.mvpdemo.bean.WeatherInfo;
 import com.example.xuan.mvpdemo.biz.weather.IWeatherBiz;
 import com.example.xuan.mvpdemo.biz.Listener.OnRequestListener;
