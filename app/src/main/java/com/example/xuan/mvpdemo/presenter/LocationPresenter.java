@@ -26,7 +26,7 @@ public class LocationPresenter {
             @Override
             public void onRequestSuccess(City city) {
                 mIWeatherView.showCityName(city);
-                new WeatherInfoPresenter(mIWeatherView).getWeatherInfo();
+                mIWeatherView.showWeather();
             }
 
             @Override

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+    <ImageView
+        android:id="@+id/iv_index"
+        android:layout_centerVertical="true"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="15dp"
+        android:src="@mipmap/ok"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="北京"
+        />
+    <TextView
+        android:id="@+id/tv_advice"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:layout_toLeftOf="@id/iv_index"
+        android:layout_below="@id/tv_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="昼夜温差较大，较易发生感冒，请适当增减衣服。体质较弱的朋友请注意防护。"
+        />
+</RelativeLayout>

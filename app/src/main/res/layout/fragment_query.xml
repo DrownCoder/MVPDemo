@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingTop="15dp"
+    >
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/delete"
+        />
+    <EditText
+        android:lines="1"
+        android:id="@+id/et_query"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/iv_delete"
+        android:background="@null"
+        android:hint="Add a city..."
+        android:gravity="center_vertical"
+        />
+    <ImageView
+        android:id="@+id/iv_query"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ok"
+        android:layout_marginRight="25dp"
+        android:visibility="gone"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/city_list"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/iv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

@@ -12,4 +12,6 @@ public class AppConstants {
 
     public static final String BASE_LOCATION_API = "http://api.map.baidu.com/";
     public static final String BASE_WEATHER_API = "http://www.sojson.com/";
+
+    public static final int STATUS_OK = 200;
 }

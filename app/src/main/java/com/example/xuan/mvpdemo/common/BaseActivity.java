@@ -1,6 +1,6 @@
 package com.example.xuan.mvpdemo.common;
 
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 
 /**
  * Author : xuan.
@@ -8,7 +8,7 @@ import android.app.Activity;
  * Description :the BaseActivity of all the Activity
  */
 
-public abstract class BaseActivity extends Activity{
+public abstract class BaseActivity extends FragmentActivity{
     public abstract void initViews();
     public abstract void initEvents();
 }

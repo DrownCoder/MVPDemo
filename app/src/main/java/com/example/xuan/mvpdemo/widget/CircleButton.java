@@ -27,15 +27,18 @@ public class CircleButton extends View {
 
     private Paint mPaintCircle;
     private Paint mPaintIndex;
-
-    private float mDownX;
-    private float mDownY;
-    private float mMoveX;
-    private float mMoveY;
-
+    private int mDirection = 1;
     private float mCenterX;
-    private float mCenterY;
 
+    public interface onRotatingListener{
+        void onRotaing(int direction);
+    }
+
+    private onRotatingListener mListener;
+
+    public void setOnRotatingListener(onRotatingListener mListener) {
+        this.mListener = mListener;
+    }
 
     public CircleButton(Context context) {
         this(context, null);
@@ -97,7 +100,7 @@ public class CircleButton extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         mCenterX = getWidth() / 2.0f;
-        mCenterY = getHeight() / 2.0f;
+        float mCenterY = getHeight() / 2.0f;
         canvas.drawCircle(mCenterX, mCenterY, mCircleRadius, mPaintCircle);
         canvas.drawCircle(getWidth() * 0.75f, getHeight() * 0.25f, mIndexRadius, mPaintIndex);
     }
@@ -105,24 +108,20 @@ public class CircleButton extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         float x = event.getX();
-        float y = event.getY();
-        int direction = 1;
         ObjectAnimator animator;
         switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN: {
-                mDownX = x;
-                mDownY = y;
-                break;
-            }
             case MotionEvent.ACTION_MOVE: {
-                mMoveX = x;
-                mMoveY = y;
-                if (mMoveX < mCenterX) {
-                    direction = -1;
+                if (x < mCenterX) {
+                    mDirection = -1;
                 }
-                animator = ObjectAnimator.ofFloat(this, "rotation", 0, 360 * direction);
+                animator = ObjectAnimator.ofFloat(this, "rotation", 0, 360 * mDirection);
                 animator.setDuration(500);
                 animator.start();
+                break;
+            }
+            case MotionEvent.ACTION_UP:{
+                mListener.onRotaing(mDirection);
+                mDirection = 1;
                 break;
             }
         }

@@ -12,11 +12,13 @@ import com.example.xuan.mvpdemo.bean.WeatherInfo;
 public interface IWeatherView {
     String getCityName();
 
-    void showWeatherInfo(WeatherInfo info);
+    void showWeatherInfo(String date, String temp, String type);
 
     void showCityName(City city);
 
     void showLoading();
 
     void hideLoading();
+
+    void showWeather();
 }

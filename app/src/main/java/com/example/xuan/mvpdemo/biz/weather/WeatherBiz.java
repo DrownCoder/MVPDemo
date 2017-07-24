@@ -32,7 +32,11 @@ public class WeatherBiz implements IWeatherBiz{
         model.enqueue(new Callback<WeatherInfo>() {
             @Override
             public void onResponse(Call<WeatherInfo> call, Response<WeatherInfo> response) {
-                onRequestListener.onRequestSuccess(response.body());
+                if (response.body().getStatus() == AppConstants.STATUS_OK) {
+                    onRequestListener.onRequestSuccess(response.body());
+                }else{
+                    onRequestListener.onRequestFailed();
+                }
             }
 
             @Override
