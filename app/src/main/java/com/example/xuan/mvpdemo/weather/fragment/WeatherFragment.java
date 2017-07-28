@@ -121,7 +121,7 @@ public class WeatherFragment extends BaseFragment implements IWeatherView {
         mIvLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mContent.setBackgroundColor(Color.BLACK);
+                mContent.setBackgroundColor(Color.parseColor("#2B2B2B"));
                 mIvSwitch.setImageResource(R.mipmap.close);
                 openColor = false;
                 mLocationPresenter.getLocationInfo();
