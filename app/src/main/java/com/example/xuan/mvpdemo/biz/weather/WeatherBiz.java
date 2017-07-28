@@ -1,9 +1,7 @@
 package com.example.xuan.mvpdemo.biz.weather;
 
-import com.example.xuan.mvpdemo.bean.City;
 import com.example.xuan.mvpdemo.bean.WeatherInfo;
 import com.example.xuan.mvpdemo.biz.Listener.OnRequestListener;
-import com.example.xuan.mvpdemo.biz.location.LocationService;
 import com.example.xuan.mvpdemo.common.AppConstants;
 
 import retrofit2.Call;
@@ -13,6 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.example.xuan.mvpdemo.common.AppConstants.BASE_WEATHER_API;
+
 
 /**
  * Author : xuan.

@@ -16,6 +16,8 @@ public interface IWeatherView {
 
     void showCityName(City city);
 
+    void showCityName(String name);
+
     void showLoading();
 
     void hideLoading();

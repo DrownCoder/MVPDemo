@@ -1,6 +1,8 @@
 package com.example.xuan.mvpdemo.weather.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.example.xuan.mvpdemo.R;
+import com.example.xuan.mvpdemo.biz.backup.DatabaseHelper;
 import com.example.xuan.mvpdemo.common.BaseActivity;
 import com.example.xuan.mvpdemo.weather.fragment.QueryFragment;
 import com.example.xuan.mvpdemo.weather.fragment.WeatherFragment;
@@ -19,6 +22,18 @@ public class MainActivity extends BaseActivity{
     private ViewPager mViewPager;
     private Fragment mWeatherFragment;
     private Fragment mQueryFragment;
+
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 0x111) {
+                String cityname = msg.obj.toString();
+                mViewPager.setCurrentItem(0);
+                ((WeatherFragment) mWeatherFragment).showCityWeather(cityname);
+            }
+        }
+    };
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +56,10 @@ public class MainActivity extends BaseActivity{
     @Override
     public void initEvents() {
 
+    }
+
+    public Handler getHandler() {
+        return mHandler;
     }
 
     public class FragAdapter extends FragmentPagerAdapter {

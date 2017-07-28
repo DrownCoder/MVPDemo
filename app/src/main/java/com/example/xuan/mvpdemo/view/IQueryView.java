@@ -1,6 +1,6 @@
 package com.example.xuan.mvpdemo.view;
 
-import com.example.xuan.mvpdemo.bean.WeatherInfo;
+import com.example.xuan.mvpdemo.bean.CityWeather;
 
 /**
  * Author : xuan.
@@ -9,7 +9,8 @@ import com.example.xuan.mvpdemo.bean.WeatherInfo;
  */
 
 public interface IQueryView {
-    void addCity(WeatherInfo city);
+    void addCity(CityWeather city);
 
     void showError();
+
 }

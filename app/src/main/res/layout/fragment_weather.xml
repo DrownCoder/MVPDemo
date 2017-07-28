@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -60,5 +61,33 @@
         app:indexRadius="5dp"
         app:indexBac="@color/black"
         android:layout_marginBottom="50dp"
+        />
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:src="@mipmap/location"
+        />
+    <ImageView
+        android:id="@+id/iv_switch"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/close"
+        />
+    <ImageView
+        android:layout_marginBottom="20dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/colorbac"
+        android:layout_toLeftOf="@id/iv_switch"
         />
 </RelativeLayout>

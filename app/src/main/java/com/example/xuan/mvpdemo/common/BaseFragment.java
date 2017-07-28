@@ -12,4 +12,5 @@ import android.view.View;
 public abstract class BaseFragment extends Fragment{
     public abstract void initViews(View root);
     public abstract void initEvents();
+    public abstract void initDatas();
 }
