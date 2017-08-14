@@ -3,6 +3,7 @@ package com.example.xuan.mvpdemo.biz.backup;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.text.TextUtils;
 
 import com.example.xuan.mvpdemo.bean.CityWeather;
 
@@ -53,6 +54,9 @@ public class BackupBiz implements IBackupBiz {
 
     @Override
     public boolean containCity(String name) {
+        if (TextUtils.isEmpty(name)) {
+            return false;
+        }
         SQLiteDatabase db = mHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select COUNT(*) from city where name = ?", new String[]{name});
         cursor.moveToFirst();

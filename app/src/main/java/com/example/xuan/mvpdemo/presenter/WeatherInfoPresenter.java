@@ -37,7 +37,7 @@ public class WeatherInfoPresenter {
             @Override
             public void onRequestSuccess(WeatherInfo info) {
                 mWeatherInfo = info;
-                mDao.insertOrUpdateCity(new CityWeather(info.getData().getCity()
+                mDao.insertOrUpdateCity(new CityWeather(info.getCity()
                         , info.getData().getWendu(), info.getData().getForecast().get(0).getType()), "1");
                 showDataWeather(0);
             }

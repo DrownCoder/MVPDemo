@@ -16,6 +16,15 @@ public class WeatherInfo {
     private DataBean data;
     private int status;
     private String message;
+    private String city;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public DataBean getData() {
         return data;

@@ -13,7 +13,6 @@ public class DataBean {
      */
 
     private YesterdayBean yesterday;
-    private String city;
     private String aqi;
     private String ganmao;
     private String wendu;
@@ -25,14 +24,6 @@ public class DataBean {
 
     public void setYesterday(YesterdayBean yesterday) {
         this.yesterday = yesterday;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     public String getAqi() {

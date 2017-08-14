@@ -36,11 +36,11 @@ public class QueryPresenter {
         mWeatherBiz.getWeatherInfo(cityName, new OnRequestListener<WeatherInfo>() {
             @Override
             public void onRequestSuccess(WeatherInfo info) {
-                boolean isUpdate = mDao.insertOrUpdateCity(new CityWeather(info.getData().getCity(),info.getData().getWendu(),
+                boolean isUpdate = mDao.insertOrUpdateCity(new CityWeather(info.getCity(),info.getData().getWendu(),
                         info.getData().getForecast().get(0).getType()));
 
                 CityWeather city = new CityWeather();
-                city.setName(info.getData().getCity());
+                city.setName(info.getCity());
                 city.setTemperature(info.getData().getWendu());
                 city.setType(info.getData().getForecast().get(0).getType());
 
