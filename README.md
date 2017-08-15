@@ -18,7 +18,4 @@
 6.随机变换背景颜色
 7.等
 
-
-![这里写图片描述](http://img.blog.csdn.net/20170815201718211?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2RmZHp4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20170815201751997?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2RmZHp4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-![这里写图片描述](http://img.blog.csdn.net/20170815201808110?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2RmZHp4/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://github.com/sdfdzx/MVPDemo/blob/master/show.gif)
